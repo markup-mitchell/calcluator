@@ -11,9 +11,9 @@ const StyledContainer = styled.div`
 `
   
 export default class KeyBoard extends Component {
-  render() {
+  render(props) {
     return (
-      <StyledContainer>
+      <StyledContainer >
         <Button val='7' />
         <Button val='8' />
         <Button val='9' />
@@ -26,7 +26,7 @@ export default class KeyBoard extends Component {
         <Button val='2' />
         <Button val='3' />
         <Button val='-' />
-        <Button val='C' />
+        <Button val='C' click={this.props.clear} />
         <Button val='0' />
         <Button val='.' />
         <Button val='+' />

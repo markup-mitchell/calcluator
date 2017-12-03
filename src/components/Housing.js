@@ -16,15 +16,24 @@ export default class Housing extends Component {
   constructor() {
     super();
     this.state = {
-
+      display: '0123456789',
+      lastDigit: null,
+      lastOperator: null,
+      calculation: null,
     }
+    this.clearScreen = this.clearScreen.bind(this);
+  }
+
+  clearScreen() {
+    this.setState( {display: '0'} )
   }
 
   render() {
     return (
       <StyledContainer>
-       <Screen />
-       <KeyBoard />
+       <Screen display={this.state.display} />
+       <KeyBoard clear={this.clearScreen} />
+      <button onClick={this.clearScreen}>clear</button>
       </ StyledContainer>
     );
   }
