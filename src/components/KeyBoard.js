@@ -6,10 +6,10 @@ const StyledContainer = styled.div`
   // &:hover { background: #12E07D; } // move this to the container
   display: flex;
   flex-wrap: wrap;
-  background-color: white; 
+  background-color: white;
   width: 315px;
 `
-  
+
 export default class KeyBoard extends Component {
   render(props) {
     return (
@@ -27,8 +27,8 @@ export default class KeyBoard extends Component {
         <Button val='3' click={this.props.enterDigit.bind(this, '3')} />
         <Button val='-' />
         <Button val='C' click={this.props.clear} />
-        <Button val='0' />
-        <Button val='.' />
+        <Button val='0' click={this.props.enterDigit.bind(this, '0')} />
+        <Button val='.' click={this.props.enterDigit.bind(this, '.')} />
         <Button val='+' />
       </ StyledContainer>
     );

@@ -39,7 +39,7 @@ export default class Housing extends Component {
       <StyledContainer>
        <Screen display={this.state.display} />
        <KeyBoard clear={this.clearScreen} enterDigit={this.enterDigit} />
-       <button onClick={this.enterDigit}>click</button>
+       <button onClick={()=> console.log('no functions currently under test')}>click</button>
       </ StyledContainer>
     );
   }
