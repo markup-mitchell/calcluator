@@ -14,7 +14,7 @@ export default class KeyBoard extends Component {
   render(props) {
     return (
       <StyledContainer >
-        <Button val='7' />
+        <Button val='7' click={this.props.enterDigit} />
         <Button val='8' />
         <Button val='9' />
         <Button val='/' />

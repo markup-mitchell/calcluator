@@ -16,24 +16,33 @@ export default class Housing extends Component {
   constructor() {
     super();
     this.state = {
-      display: '0123456789',
+      display: 123456789,
       lastDigit: null,
       lastOperator: null,
       calculation: null,
     }
     this.clearScreen = this.clearScreen.bind(this);
+    this.enterDigit = this.enterDigit.bind(this);
   }
 
   clearScreen() {
     this.setState( {display: '0'} )
   }
 
+  enterDigit(digit) {
+    // this.setState( prevState => { 
+    //   display: prevState.display + digit
+    // })
+      console.log("dsfsdf")
+  } 
+
+
   render() {
     return (
       <StyledContainer>
        <Screen display={this.state.display} />
-       <KeyBoard clear={this.clearScreen} />
-      <button onClick={this.clearScreen}>clear</button>
+       <KeyBoard clear={this.clearScreen} enterDigit={this.enterDigit} />
+       <button onClick={this.enterDigit}>click</button>
       </ StyledContainer>
     );
   }
