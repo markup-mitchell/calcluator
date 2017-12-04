@@ -14,17 +14,17 @@ export default class KeyBoard extends Component {
   render(props) {
     return (
       <StyledContainer >
-        <Button val='7' click={this.props.enterDigit} />
-        <Button val='8' />
-        <Button val='9' />
+        <Button val='7' click={this.props.enterDigit.bind(this, '7')} />
+        <Button val='8' click={this.props.enterDigit.bind(this, '8')} />
+        <Button val='9' click={this.props.enterDigit.bind(this, '9')} />
         <Button val='/' />
-        <Button val='4' />
-        <Button val='5' />
-        <Button val='6' />
+        <Button val='4' click={this.props.enterDigit.bind(this, '4')} />
+        <Button val='5' click={this.props.enterDigit.bind(this, '5')} />
+        <Button val='6' click={this.props.enterDigit.bind(this, '6')} />
         <Button val='x' />
-        <Button val='1' />
-        <Button val='2' />
-        <Button val='3' />
+        <Button val='1' click={this.props.enterDigit.bind(this, '1')} />
+        <Button val='2' click={this.props.enterDigit.bind(this, '2')} />
+        <Button val='3' click={this.props.enterDigit.bind(this, '3')} />
         <Button val='-' />
         <Button val='C' click={this.props.clear} />
         <Button val='0' />

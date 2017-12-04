@@ -16,7 +16,7 @@ export default class Housing extends Component {
   constructor() {
     super();
     this.state = {
-      display: 123456789,
+      display: '0',
       lastDigit: null,
       lastOperator: null,
       calculation: null,
@@ -30,10 +30,7 @@ export default class Housing extends Component {
   }
 
   enterDigit(digit) {
-    // this.setState( prevState => { 
-    //   display: prevState.display + digit
-    // })
-      console.log("dsfsdf")
+    this.setState( prevState => ({ display: prevState.display.concat(digit) }))
   } 
 
 
